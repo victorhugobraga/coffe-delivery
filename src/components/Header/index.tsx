@@ -1,7 +1,22 @@
+import { CheckoutButton, HeaderContainer, LocateButton } from './styles'
+import LogoCoffeDelivery from '../../assets/logo.svg'
+import { MapPin, ShoppingCart } from 'phosphor-react'
+
 export function Header() {
   return (
-    <header>
-      <h1>Header</h1>
-    </header>
-  );
+    <HeaderContainer>
+      <a href="/">
+        <img src={LogoCoffeDelivery} alt="" />
+      </a>
+
+      <div>
+        <LocateButton>
+          <MapPin /> Uberlândia, MG
+        </LocateButton>
+        <CheckoutButton>
+          <ShoppingCart />
+        </CheckoutButton>
+      </div>
+    </HeaderContainer>
+  )
 }
