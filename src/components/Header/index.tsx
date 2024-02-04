@@ -11,10 +11,10 @@ export function Header() {
 
       <div>
         <LocateButton>
-          <MapPin /> Uberlândia, MG
+          <MapPin weight="fill" width={16} /> Uberlândia, MG
         </LocateButton>
         <CheckoutButton>
-          <ShoppingCart />
+          <ShoppingCart weight="fill" />
         </CheckoutButton>
       </div>
     </HeaderContainer>

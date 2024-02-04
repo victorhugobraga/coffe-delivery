@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
+  max-width: 1120px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 
   & > div {
     display: flex;
@@ -14,41 +17,43 @@ export const HeaderContainer = styled.header`
   }
 `
 
-export const LocateButton = styled.button`
+const baseButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.25rem;
   padding: 0.5rem;
 
-  background: ${(props) => props.theme['purple-light']};
   border: none;
   border-radius: 0.375rem;
-  transition: 300ms;
 
   font-size: 0.875rem;
   font-weight: 130;
-  color: ${(props) => props.theme['purple-dark']};
   cursor: pointer;
+
+  transition: 300ms;
 
   &:hover {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   }
 `
 
-export const CheckoutButton = styled.button`
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
+export const LocateButton = styled(baseButton)`
+  background: ${(props) => props.theme['purple-light']};
+  color: ${(props) => props.theme['purple-dark']};
 
+  svg {
+    color: ${(props) => props.theme.purple};
+    width: 15.13px;
+    height: 19.25px;
+  }
+`
+
+export const CheckoutButton = styled(baseButton)`
   background: ${(props) => props.theme['yellow-light']};
-  border: none;
-  border-radius: 0.375rem;
-  transition: 300ms;
-
   color: ${(props) => props.theme['yellow-dark']};
-  cursor: pointer;
 
-  &:hover {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  svg {
+    width: 18.56px;
+    height: 17.88px;
   }
 `
