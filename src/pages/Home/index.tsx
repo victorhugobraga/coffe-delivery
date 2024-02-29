@@ -1,6 +1,13 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import CoffeIntro from '../../assets/coffe-intro.png'
-import { BenefitIcon, BenefitsContainer, IntroContainer } from './styles'
+import {
+  BenefitIcon,
+  BenefitsContainer,
+  IntroContainer,
+  ProductCard,
+  ProductsContainer,
+  Tags,
+} from './styles'
 
 export function Home() {
   return (
@@ -49,6 +56,22 @@ export function Home() {
           </div>
         </div>
       </IntroContainer>
+
+      <ProductsContainer>
+        <h2>Nossos cafés</h2>
+
+        <div>
+          <ProductCard>
+            {/* <img src={CoffeIntro} alt="" /> */}
+            <Tags>
+              <span>TRADICIONAL</span>
+            </Tags>
+
+            <h3>Expresso Tradicional</h3>
+            <p>O tradicional café feito com água quente e grãos moídos</p>
+          </ProductCard>
+        </div>
+      </ProductsContainer>
     </main>
   )
 }

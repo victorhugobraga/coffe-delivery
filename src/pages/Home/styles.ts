@@ -67,3 +67,62 @@ export const BenefitIcon = styled.span<BenefitIconProps>`
   color: ${(props) => props.theme.white};
   background: ${(props) => props.theme[BENEFIT_ICON[props.color]]};
 `
+export const ProductsContainer = styled.section`
+  max-width: 1120px;
+  margin: 0 auto;
+
+  h2 {
+    color: ${(props) => props.theme['base-subtitle']};
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 3.25rem;
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+`
+
+export const ProductCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: ${(props) => props.theme['base-card']};
+  padding: 1.25rem;
+  border-radius: 6px 36px 6px 36px;
+  text-align: center;
+
+  h3 {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: ${(props) => props.theme['base-subtitle']};
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: ${(props) => props.theme['base-label']};
+  }
+`
+
+export const Tags = styled.div`
+  display: flex;
+  gap: 0.25rem;
+
+  span {
+    width: min-content;
+    margin: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+
+    background-color: ${(props) => props.theme['yellow-light']};
+    color: ${(props) => props.theme['yellow-dark']};
+    font-size: 0.625rem;
+    font-weight: 700;
+  }
+`
