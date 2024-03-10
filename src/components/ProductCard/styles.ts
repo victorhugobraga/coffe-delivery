@@ -6,19 +6,17 @@ export const ProductCardContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
+  flex: 1;
 
+  position: relative;
   background-color: ${(props) => props.theme['base-card']};
+  max-width: 256px;
   padding: 1.25rem;
   border-radius: 6px 36px 6px 36px;
   text-align: center;
-  height: 310px;
-  position: relative;
 
   img {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: -25px;
+    margin-top: -48px;
   }
 
   h3 {
@@ -115,10 +113,11 @@ export const Quantity = styled.div`
 
 export const Tags = styled.div`
   display: flex;
+  justify-content: center;
   gap: 0.25rem;
+  width: 100%;
 
   span {
-    width: min-content;
     margin: 0.5rem 0;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;

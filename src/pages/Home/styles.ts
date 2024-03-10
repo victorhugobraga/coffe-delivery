@@ -4,9 +4,10 @@ export const IntroContainer = styled.section`
   background: url('./bg-intro.png');
 
   & > div {
+    box-sizing: content-box;
     max-width: 1120px;
     margin: 0 auto;
-    padding: 5.75rem 0;
+    padding: 5.75rem 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,26 @@ export const IntroContainer = styled.section`
         sans-serif;
       color: ${(props) => props.theme['base-title']};
       margin-bottom: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      img {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 425px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      font-size: 1rem;
     }
   }
 `
@@ -42,6 +63,10 @@ export const BenefitsContainer = styled.div`
     align-items: center;
     gap: 0.75rem;
   }
+
+  @media (max-width: 425px) {
+    font-size: 0.75rem;
+  }
 `
 
 const BENEFIT_ICON = {
@@ -56,8 +81,9 @@ interface BenefitIconProps {
 }
 
 export const BenefitIcon = styled.span<BenefitIconProps>`
-  width: 2rem;
-  height: 2rem;
+  box-sizing: content-box;
+  width: 32px;
+  height: 32px;
 
   display: flex;
   align-items: center;
@@ -68,8 +94,10 @@ export const BenefitIcon = styled.span<BenefitIconProps>`
   background: ${(props) => props.theme[BENEFIT_ICON[props.color]]};
 `
 export const ProductsContainer = styled.section`
+  box-sizing: content-box;
   max-width: 1120px;
   margin: 0 auto 10rem;
+  padding: 0 1rem;
 
   h2 {
     color: ${(props) => props.theme['base-subtitle']};
@@ -80,8 +108,9 @@ export const ProductsContainer = styled.section`
   }
 
   > div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    row-gap: 2.5rem;
   }
 `
