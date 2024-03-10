@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Coffe Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an educational project developed by Rocketseat, aiming to demonstrate web development concepts and pratices using ReactJS with Vite. The project consists of a coffe delivery website, where users can view available products, place orders, and proceed to checkout.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View available coffe products
+- Add products to the shopping cart
+- Remove products from the shopping cart
+- Calculate the order amount
+- Complete the order with delivery information
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/victorhugobraga/coffe-delivery.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project folder:
+
+```bash
+cd coffe-delivery
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+2. Access the website at `http://localhost:3000`
+
+## Technologies Used
+
+- ReactJS - JavaScript library for building user interfaces
+- Vite - Fast build tool for modern web projects
+- TypeScript - Typed superset of JavaScript
+- Styled Components - CSS-in-JS library
+
+## Design on Figma
+
+The project desing was created on Figma and can be accessed [here](https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate).
